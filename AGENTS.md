@@ -19,6 +19,7 @@
 
 - Update `calUsername` and `eventType` in `components/booking-modal.tsx` to match live Cal.com slugs.
 - If multiple event types are needed, add a selector or separate buttons before opening the modal.
+- Cal.com embed theme colors are configured in the Cal.com dashboard (not via local code).
 
 ## Content/Branding Notes
 
