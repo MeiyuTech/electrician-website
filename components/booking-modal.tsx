@@ -7,12 +7,12 @@ import { ExternalLink } from "lucide-react"
 interface BookingModalProps {
   open: boolean
   onOpenChange: (open: boolean) => void
+  eventType: string
 }
 
-export function BookingModal({ open, onOpenChange }: BookingModalProps) {
+export function BookingModal({ open, onOpenChange, eventType }: BookingModalProps) {
   const calUsername: string = "ca-electrician"
-  // const eventType = "appliance-repair"
-  const calUrl = `https://cal.com/${calUsername}`
+  const calUrl = `https://cal.com/${calUsername}/${eventType}`
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -43,7 +43,11 @@ export function BookingModal({ open, onOpenChange }: BookingModalProps) {
                       </a>{" "}
                       注册免费账号
                     </li>
-                    <li>创建名为 "appliance-repair" 的活动类型（30分钟维修咨询）</li>
+                    <li>
+                      创建名为{" "}
+                      <code className="bg-muted px-1 py-0.5 rounded text-xs">{eventType}</code>{" "}
+                      的活动类型（按需设置时长与类型）
+                    </li>
                     <li>
                       在 <code className="bg-muted px-1 py-0.5 rounded text-xs">components/booking-modal.tsx</code> 中将{" "}
                       <code className="bg-muted px-1 py-0.5 rounded text-xs">YOUR_CAL_USERNAME</code> 替换为您的用户名

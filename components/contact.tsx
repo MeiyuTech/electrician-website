@@ -6,10 +6,23 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, Clock, Calendar } from "lucide-react"
+import { useIsMobile } from "@/hooks/use-mobile"
 import { BookingModal } from "./booking-modal"
 
 export function Contact() {
   const [bookingOpen, setBookingOpen] = useState(false)
+  const eventType = "on-site-electrical-service"
+  const isMobile = useIsMobile()
+  const calUsername = "ca-electrician"
+
+  const handleBooking = () => {
+    if (isMobile) {
+      window.location.href = `https://cal.com/${calUsername}/${eventType}`
+      return
+    }
+
+    setBookingOpen(true)
+  }
 
   return (
     <section className="bg-muted/50 py-20 md:py-32">
@@ -29,7 +42,7 @@ export function Contact() {
                 <div className="flex-1">
                   <h3 className="mb-1 font-semibold">在线预约</h3>
                   <p className="text-sm text-muted-foreground mb-3">选择您方便的时间，查看实时可用时段</p>
-                  <Button onClick={() => setBookingOpen(true)} size="sm">
+                  <Button onClick={handleBooking} size="sm">
                     立即预约
                   </Button>
                 </div>
@@ -123,7 +136,7 @@ export function Contact() {
         </div>
       </div>
 
-      <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} />
+      <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} eventType={eventType} />
     </section>
   )
 }

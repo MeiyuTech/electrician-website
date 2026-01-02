@@ -3,10 +3,24 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
+import { useIsMobile } from "@/hooks/use-mobile"
 import { BookingModal } from "./booking-modal"
 
 export function Hero() {
   const [bookingOpen, setBookingOpen] = useState(false)
+  const [eventType, setEventType] = useState("on-site-electrical-service")
+  const isMobile = useIsMobile()
+  const calUsername = "ca-electrician"
+
+  const handleBooking = (type: string) => {
+    if (isMobile) {
+      window.location.href = `https://cal.com/${calUsername}/${type}`
+      return
+    }
+
+    setEventType(type)
+    setBookingOpen(true)
+  }
 
   return (
     <section className="relative overflow-hidden bg-secondary py-20 text-secondary-foreground md:py-32">
@@ -42,16 +56,16 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="text-base" onClick={() => setBookingOpen(true)}>
-                在线预约
+              <Button size="lg" className="text-base" onClick={() => handleBooking("on-site-electrical-service")}>
+                上门预约
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="text-base border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10 bg-transparent"
-                asChild
+                onClick={() => handleBooking("service-inquiry-message-only")}
               >
-                <a href="tel:9493004828">致电咨询</a>
+                留言咨询
               </Button>
             </div>
           </div>
@@ -68,7 +82,7 @@ export function Hero() {
         </div>
       </div>
 
-      <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} />
+      <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} eventType={eventType} />
     </section>
   )
 }
