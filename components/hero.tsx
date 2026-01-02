@@ -1,27 +1,9 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
-import { useIsMobile } from "@/hooks/use-mobile"
-import { BookingModal } from "./booking-modal"
+import { CalBookingButton } from "@/components/cal-booking-button"
 
 export function Hero() {
-  const [bookingOpen, setBookingOpen] = useState(false)
-  const [eventType, setEventType] = useState("on-site-electrical-service")
-  const isMobile = useIsMobile()
-  const calUsername = "ca-electrician"
-
-  const handleBooking = (type: string) => {
-    if (isMobile) {
-      window.location.href = `https://cal.com/${calUsername}/${type}`
-      return
-    }
-
-    setEventType(type)
-    setBookingOpen(true)
-  }
-
   return (
     <section className="relative overflow-hidden bg-secondary py-20 text-secondary-foreground md:py-32">
       <div className="container mx-auto px-4">
@@ -56,17 +38,14 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="text-base" onClick={() => handleBooking("on-site-electrical-service")}>
-                上门预约
-              </Button>
-              <Button
+              <CalBookingButton size="lg" className="text-base" eventType="on-site-electrical-service" label="上门预约" />
+              <CalBookingButton
                 size="lg"
                 variant="outline"
                 className="text-base border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10 bg-transparent"
-                onClick={() => handleBooking("service-inquiry-message-only")}
-              >
-                留言咨询
-              </Button>
+                eventType="service-inquiry-message-only"
+                label="留言咨询"
+              />
             </div>
           </div>
 
@@ -81,8 +60,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-
-      <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} eventType={eventType} />
     </section>
   )
 }
