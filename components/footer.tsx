@@ -34,7 +34,7 @@ export function Footer() {
               <li>
                 电话:{" "}
                 <a href="tel:9493004828" className="hover:underline">
-                  9493004828
+                  (949) 300-4828
                 </a>
               </li>
               <li>

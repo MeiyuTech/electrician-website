@@ -1,28 +1,32 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { useEffect } from "react"
+import Cal, { getCalApi } from "@calcom/embed-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, Clock, Calendar } from "lucide-react"
-import { useIsMobile } from "@/hooks/use-mobile"
-import { BookingModal } from "./booking-modal"
 
 export function Contact() {
-  const [bookingOpen, setBookingOpen] = useState(false)
-  const eventType = "on-site-electrical-service"
-  const isMobile = useIsMobile()
-  const calUsername = "ca-electrician"
+  const calUsername = String("ca-electrician")
+  const eventType = "service-inquiry-message-only"
+  const namespace = eventType
 
-  const handleBooking = () => {
-    if (isMobile) {
-      window.location.href = `https://cal.com/${calUsername}/${eventType}`
+  useEffect(() => {
+    if (calUsername === "YOUR_CAL_USERNAME") {
       return
     }
 
-    setBookingOpen(true)
-  }
+    ;(async () => {
+      const cal = await getCalApi({ namespace })
+      cal("ui", {
+        cssVarsPerTheme: {
+          light: { "cal-brand": "#f18600" },
+          dark: { "cal-brand": "#f18600" },
+        },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      })
+    })()
+  }, [calUsername, namespace])
 
   return (
     <section className="bg-muted/50 py-20 md:py-32">
@@ -42,9 +46,7 @@ export function Contact() {
                 <div className="flex-1">
                   <h3 className="mb-1 font-semibold">在线预约</h3>
                   <p className="text-sm text-muted-foreground mb-3">选择您方便的时间，查看实时可用时段</p>
-                  <Button onClick={handleBooking} size="sm">
-                    立即预约
-                  </Button>
+                  <p className="text-sm text-muted-foreground">右侧可直接选择时间并提交预约</p>
                 </div>
               </CardContent>
             </Card>
@@ -58,7 +60,7 @@ export function Contact() {
                   <h3 className="mb-1 font-semibold">电话</h3>
                   <p className="text-sm text-muted-foreground">致电预约服务</p>
                   <a href="tel:9493004828" className="mt-2 block text-lg font-semibold text-primary hover:underline">
-                    9493004828
+                    (949) 300-4828
                   </a>
                 </div>
               </CardContent>
@@ -74,7 +76,7 @@ export function Contact() {
                   <p className="text-sm text-muted-foreground">发送邮件咨询</p>
                   <a
                     href="mailto:info@ca-electrician.com"
-                    className="mt-2 block text-primary hover:underline"
+                    className="mt-2 block text-lg font-semibold text-primary hover:underline"
                   >
                     info@ca-electrician.com
                   </a>
@@ -102,41 +104,18 @@ export function Contact() {
 
           <Card>
             <CardContent className="p-6">
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="mb-2 block text-sm font-medium">
-                    姓名 *
-                  </label>
-                  <Input id="name" placeholder="您的姓名" required />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="mb-2 block text-sm font-medium">
-                    电话 *
-                  </label>
-                  <Input id="phone" type="tel" placeholder="(714) 555-0123" required />
-                </div>
-                <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-medium">
-                    邮箱
-                  </label>
-                  <Input id="email" type="email" placeholder="your@email.com" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="mb-2 block text-sm font-medium">
-                    留言 *
-                  </label>
-                  <Textarea id="message" placeholder="请描述您的电器问题..." rows={4} required />
-                </div>
-                <Button type="submit" className="w-full">
-                  提交预约
-                </Button>
-              </form>
+              <div className="h-[720px] w-full overflow-hidden rounded-lg ">
+                <Cal
+                  namespace={namespace}
+                  calLink={`${calUsername}/${eventType}`}
+                  style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                  config={{ layout: "month_view" }}
+                />
+              </div>
             </CardContent>
           </Card>
         </div>
       </div>
-
-      <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} eventType={eventType} />
     </section>
   )
 }
