@@ -10,9 +10,9 @@ interface BookingModalProps {
 }
 
 export function BookingModal({ open, onOpenChange }: BookingModalProps) {
-  const calUsername = "YOUR_CAL_USERNAME"
-  const eventType = "appliance-repair"
-  const calUrl = `https://cal.com/${calUsername}/${eventType}`
+  const calUsername: string = "ca-electrician"
+  // const eventType = "appliance-repair"
+  const calUrl = `https://cal.com/${calUsername}`
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>

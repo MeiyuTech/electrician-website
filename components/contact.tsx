@@ -45,7 +45,7 @@ export function Contact() {
                   <h3 className="mb-1 font-semibold">电话</h3>
                   <p className="text-sm text-muted-foreground">致电预约服务</p>
                   <a href="tel:9493004828" className="mt-2 block text-lg font-semibold text-primary hover:underline">
-                    (949) 300-4828
+                    9493004828
                   </a>
                 </div>
               </CardContent>
@@ -59,7 +59,12 @@ export function Contact() {
                 <div>
                   <h3 className="mb-1 font-semibold">邮箱</h3>
                   <p className="text-sm text-muted-foreground">发送邮件咨询</p>
-                  <p className="mt-2 text-primary">info@ocappliancerepair.com</p>
+                  <a
+                    href="mailto:info@ca-electrician.com"
+                    className="mt-2 block text-primary hover:underline"
+                  >
+                    info@ca-electrician.com
+                  </a>
                 </div>
               </CardContent>
             </Card>

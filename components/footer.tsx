@@ -31,8 +31,18 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">联系方式</h3>
             <ul className="space-y-2 text-sm text-secondary-foreground/80">
-              <li>电话: (949) 300-4828</li>
-              <li>邮箱: info@ocappliancerepair.com</li>
+              <li>
+                电话:{" "}
+                <a href="tel:9493004828" className="hover:underline">
+                  9493004828
+                </a>
+              </li>
+              <li>
+                邮箱:{" "}
+                <a href="mailto:info@ca-electrician.com" className="hover:underline">
+                  info@ca-electrician.com
+                </a>
+              </li>
               <li>持证经营 · 保险齐全</li>
             </ul>
           </div>
