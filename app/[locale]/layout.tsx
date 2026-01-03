@@ -3,7 +3,7 @@ import type { ReactNode } from "react"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
-import { locales } from "@/i18n"
+import { locales } from "@/i18n/request"
 
 type LocaleLayoutProps = Readonly<{
   children: ReactNode
