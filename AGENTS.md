@@ -15,6 +15,10 @@
 - Build: `pnpm build`
 - Start: `pnpm start`
 
+## Internationalization
+
+- Use `next-intl` `^4.6.1` for Next.js 16 compatibility (older versions can trigger invalid `experimental.turbo` warnings).
+
 ## Booking (Cal.com)
 
 - Update `calUsername` and `eventType` in `components/booking-modal.tsx` to match live Cal.com slugs.
