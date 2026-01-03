@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Phone } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function Header() {
+  const t = useTranslations("Header")
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -23,14 +26,14 @@ export function Header() {
             </svg>
           </div>
           <div>
-            <h1 className="text-lg font-bold text-secondary">橙县电器维修</h1>
-            <p className="text-xs text-muted-foreground">专业·快速·可靠</p>
+            <h1 className="text-lg font-bold text-secondary">{t("brandName")}</h1>
+            <p className="text-xs text-muted-foreground">{t("tagline")}</p>
           </div>
         </div>
         <Button className="gap-2" asChild>
           <a href="tel:9493004828">
             <Phone className="h-4 w-4" />
-            立即致电
+            {t("cta")}
           </a>
         </Button>
       </div>

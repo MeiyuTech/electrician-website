@@ -1,0 +1,144 @@
+{
+  "Metadata": {
+    "title": "Reparación de electrodomésticos en Orange County | Aire acondicionado, refrigerador, lavadora y lavavajillas",
+    "description": "Servicio profesional de reparación de electrodomésticos en Orange County. Reparación e instalación de aire acondicionado, refrigerador, lavadora y lavavajillas. Cargo de visita $50, se descuenta al aprobar el presupuesto."
+  },
+  "Header": {
+    "brandName": "Reparación de Electrodomésticos en Orange County",
+    "tagline": "Profesional · Rápido · Confiable",
+    "cta": "Llamar ahora"
+  },
+  "Hero": {
+    "title": "Servicio profesional de reparación de electrodomésticos",
+    "subtitle": "Atendemos Orange County con reparación e instalación rápidas y confiables.",
+    "bullets": ["Técnicos certificados", "Servicio el mismo día", "Precios transparentes", "Garantía de servicio"],
+    "primaryCta": "Agendar visita a domicilio",
+    "secondaryCta": "Consulta por mensaje",
+    "imageAlt": "Técnico profesional reparando un aire acondicionado"
+  },
+  "Services": {
+    "title": "Nuestros servicios",
+    "subtitle": "Servicios completos de reparación e instalación de electrodomésticos",
+    "items": [
+      {
+        "title": "Reparación e instalación de aire acondicionado",
+        "description": "Reparación, instalación y mantenimiento profesional de aire acondicionado. Atendemos sistemas centrales y tipo split de todas las marcas.",
+        "features": ["Diagnóstico y reparación", "Instalación de sistemas nuevos", "Mantenimiento periódico", "Servicio de emergencia 24/7"],
+        "featured": true
+      },
+      {
+        "title": "Reparación de refrigeradores",
+        "description": "Diagnóstico rápido y reparación de fallas de enfriamiento, fugas, ruidos y más.",
+        "features": ["Reparación del sistema de enfriamiento", "Ajustes de termostato", "Cambio de empaques", "Reparación de compresor"]
+      },
+      {
+        "title": "Reparación de lavadoras",
+        "description": "Solucionamos problemas comunes como drenaje, giro y fugas.",
+        "features": ["Sistema de drenaje", "Reparación de motor", "Panel de control", "Reemplazo de piezas"]
+      },
+      {
+        "title": "Instalación y reparación de lavavajillas",
+        "description": "Instalación y reparación profesional para que su lavavajillas funcione correctamente.",
+        "features": ["Instalación de equipo nuevo", "Reparación de fugas", "Sistema de limpieza", "Revisión eléctrica"]
+      }
+    ]
+  },
+  "Pricing": {
+    "title": "Precios transparentes",
+    "subtitle": "Sin costos ocultos, precios claros",
+    "visitFeeTitle": "Cargo por visita",
+    "visitFeeAmount": "$50",
+    "visitFeePriceLabel": "Tarifa única",
+    "visitFeeFeatures": [
+      "Diagnóstico en sitio por un técnico profesional",
+      "Evaluación detallada del problema",
+      "Recomendaciones de reparación"
+    ],
+    "visitFeeCta": "Agendar diagnóstico",
+    "acceptQuoteTitle": "Aprobar el presupuesto",
+    "acceptQuoteAmount": "Gratis",
+    "acceptQuotePriceLabel": "Se descuenta la visita",
+    "acceptQuoteFeatures": [
+      "Presupuesto detallado de reparación",
+      "La visita se descuenta al aprobar",
+      "Servicio de reparación profesional",
+      "Garantía de servicio"
+    ],
+    "acceptQuoteCta": "Reservar ahora",
+    "footnote": "* El cargo de visita cubre diagnóstico y evaluación. Si aprueba el presupuesto, se descuenta el cargo."
+  },
+  "ServiceArea": {
+    "title": "Zona de servicio",
+    "subtitle": "Con orgullo atendemos Orange County y áreas cercanas",
+    "regionTitle": "Orange County",
+    "regionSubtitle": "Todas las ciudades de Orange County, incluyendo:",
+    "cities": [
+      "Anaheim",
+      "Irvine",
+      "Huntington Beach",
+      "Santa Ana",
+      "Newport Beach",
+      "Fullerton",
+      "Costa Mesa",
+      "Tustin",
+      "Y más..."
+    ],
+    "cta": "¿No está seguro de si su zona está dentro del servicio? ¡Llámenos!"
+  },
+  "Contact": {
+    "title": "Contáctanos",
+    "subtitle": "Contáctenos en cualquier momento y responderemos pronto",
+    "booking": {
+      "title": "Reserva en línea",
+      "description": "Elija un horario conveniente y vea la disponibilidad en tiempo real.",
+      "note": "Seleccione un horario a la derecha y envíe su reserva."
+    },
+    "phone": {
+      "title": "Teléfono",
+      "description": "Llame para reservar el servicio"
+    },
+    "email": {
+      "title": "Correo",
+      "description": "Envíenos su consulta"
+    },
+    "hours": {
+      "title": "Horario de atención",
+      "weekday": "Lun–Vie: 8:00 AM - 8:00 PM",
+      "saturday": "Sáb: 9:00 AM - 6:00 PM",
+      "sunday": "Dom: 10:00 AM - 4:00 PM",
+      "emergency": "Servicio de emergencia disponible"
+    }
+  },
+  "Footer": {
+    "brandName": "Reparación de Electrodomésticos en Orange County",
+    "brandDescription": "Servicio profesional, rápido y confiable de reparación de electrodomésticos en Orange County y alrededores.",
+    "servicesTitle": "Servicios",
+    "services": [
+      "Reparación de aire acondicionado",
+      "Reparación de refrigeradores",
+      "Reparación de lavadoras",
+      "Instalación de lavavajillas"
+    ],
+    "areasTitle": "Áreas de servicio",
+    "areas": ["Todas las ciudades de Orange County", "Anaheim", "Irvine", "Huntington Beach"],
+    "contactTitle": "Contacto",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo",
+    "license": "Licencia y seguro vigente",
+    "copyright": "© 2026 Reparación de Electrodomésticos en Orange County. Todos los derechos reservados."
+  },
+  "BookingModal": {
+    "title": "Reservar servicio de reparación de electrodomésticos",
+    "description": "Elija un horario conveniente y le brindaremos servicio profesional de reparación de electrodomésticos.",
+    "setupPending": "La reserva de Cal.com se está configurando...",
+    "stepsTitle": "Pasos de configuración:",
+    "steps": {
+      "createAccount": "Vaya a <link>Cal.com</link> y cree una cuenta gratuita",
+      "createEventType": "Cree un tipo de evento llamado <code>{eventType}</code> (ajuste la duración y el tipo según sea necesario)",
+      "updateUsername": "En <file>components/booking-modal.tsx</file>, reemplace <placeholder>YOUR_CAL_USERNAME</placeholder> con su usuario",
+      "connectCalendar": "Conecte Google Calendar para sincronizar su disponibilidad"
+    },
+    "setupCta": "Abrir configuración de Cal.com",
+    "iframeTitle": "Reservar servicio"
+  }
+}

@@ -4,8 +4,10 @@ import { useEffect } from "react"
 import Cal, { getCalApi } from "@calcom/embed-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, Clock, Calendar } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function Contact() {
+  const t = useTranslations("Contact")
   const calUsername = String("ca-electrician")
   const eventType = "service-inquiry-message-only"
   const namespace = eventType
@@ -32,8 +34,8 @@ export function Contact() {
     <section className="bg-muted/50 py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">联系我们</h2>
-          <p className="text-pretty text-lg text-muted-foreground">随时与我们联系，我们将尽快回复</p>
+          <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">{t("title")}</h2>
+          <p className="text-pretty text-lg text-muted-foreground">{t("subtitle")}</p>
         </div>
 
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2">
@@ -44,9 +46,9 @@ export function Contact() {
                   <Calendar className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 font-semibold">在线预约</h3>
-                  <p className="text-sm text-muted-foreground mb-3">选择您方便的时间，查看实时可用时段</p>
-                  <p className="text-sm text-muted-foreground">右侧可直接选择时间并提交预约</p>
+                  <h3 className="mb-1 font-semibold">{t("booking.title")}</h3>
+                  <p className="mb-3 text-sm text-muted-foreground">{t("booking.description")}</p>
+                  <p className="text-sm text-muted-foreground">{t("booking.note")}</p>
                 </div>
               </CardContent>
             </Card>
@@ -57,8 +59,8 @@ export function Contact() {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-1 font-semibold">电话</h3>
-                  <p className="text-sm text-muted-foreground">致电预约服务</p>
+                  <h3 className="mb-1 font-semibold">{t("phone.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("phone.description")}</p>
                   <a href="tel:9493004828" className="mt-2 block text-lg font-semibold text-primary hover:underline">
                     (949) 300-4828
                   </a>
@@ -72,8 +74,8 @@ export function Contact() {
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-1 font-semibold">邮箱</h3>
-                  <p className="text-sm text-muted-foreground">发送邮件咨询</p>
+                  <h3 className="mb-1 font-semibold">{t("email.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("email.description")}</p>
                   <a
                     href="mailto:info@ca-electrician.com"
                     className="mt-2 block text-lg font-semibold text-primary hover:underline"
@@ -90,12 +92,12 @@ export function Contact() {
                   <Clock className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-1 font-semibold">营业时间</h3>
+                  <h3 className="mb-1 font-semibold">{t("hours.title")}</h3>
                   <div className="mt-2 space-y-1 text-sm">
-                    <p>周一至周五：8:00 AM - 8:00 PM</p>
-                    <p>周六：9:00 AM - 6:00 PM</p>
-                    <p>周日：10:00 AM - 4:00 PM</p>
-                    <p className="mt-2 font-semibold text-primary">提供紧急服务</p>
+                    <p>{t("hours.weekday")}</p>
+                    <p>{t("hours.saturday")}</p>
+                    <p>{t("hours.sunday")}</p>
+                    <p className="mt-2 font-semibold text-primary">{t("hours.emergency")}</p>
                   </div>
                 </div>
               </CardContent>

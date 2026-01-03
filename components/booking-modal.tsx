@@ -3,6 +3,7 @@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 interface BookingModalProps {
   open: boolean
@@ -11,6 +12,7 @@ interface BookingModalProps {
 }
 
 export function BookingModal({ open, onOpenChange, eventType }: BookingModalProps) {
+  const t = useTranslations("BookingModal")
   const calUsername: string = "ca-electrician"
   const calUrl = `https://cal.com/${calUsername}/${eventType}`
 
@@ -18,46 +20,51 @@ export function BookingModal({ open, onOpenChange, eventType }: BookingModalProp
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl max-h-[90vh] p-0">
         <DialogHeader className="p-6 pb-4">
-          <DialogTitle>预约电器维修服务</DialogTitle>
-          <DialogDescription>选择您方便的时间，我们将为您提供专业的电器维修服务</DialogDescription>
+          <DialogTitle>{t("title")}</DialogTitle>
+          <DialogDescription>{t("description")}</DialogDescription>
         </DialogHeader>
 
         <div className="px-6 pb-6">
           {calUsername === "YOUR_CAL_USERNAME" ? (
             <div className="flex items-center justify-center py-12 border rounded-lg bg-muted/30">
               <div className="text-center space-y-4 max-w-md px-4">
-                <p className="text-muted-foreground">Cal.com 预约系统准备中...</p>
+                <p className="text-muted-foreground">{t("setupPending")}</p>
                 <div className="space-y-3 text-sm text-muted-foreground">
-                  <p className="font-semibold text-foreground">设置步骤：</p>
+                  <p className="font-semibold text-foreground">{t("stepsTitle")}</p>
                   <ol className="text-left space-y-2 list-decimal list-inside">
                     <li>
-                      前往{" "}
-                      <a
-                        href="https://cal.com/signup"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline inline-flex items-center gap-1"
-                      >
-                        Cal.com
-                        <ExternalLink className="h-3 w-3" />
-                      </a>{" "}
-                      注册免费账号
+                      {t.rich("steps.createAccount", {
+                        link: (chunks) => (
+                          <a
+                            href="https://cal.com/signup"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline inline-flex items-center gap-1"
+                          >
+                            {chunks}
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        ),
+                      })}
                     </li>
                     <li>
-                      创建名为{" "}
-                      <code className="bg-muted px-1 py-0.5 rounded text-xs">{eventType}</code>{" "}
-                      的活动类型（按需设置时长与类型）
+                      {t.rich("steps.createEventType", {
+                        eventType,
+                        code: (chunks) => <code className="bg-muted px-1 py-0.5 rounded text-xs">{chunks}</code>,
+                      })}
                     </li>
                     <li>
-                      在 <code className="bg-muted px-1 py-0.5 rounded text-xs">components/booking-modal.tsx</code> 中将{" "}
-                      <code className="bg-muted px-1 py-0.5 rounded text-xs">YOUR_CAL_USERNAME</code> 替换为您的用户名
+                      {t.rich("steps.updateUsername", {
+                        file: (chunks) => <code className="bg-muted px-1 py-0.5 rounded text-xs">{chunks}</code>,
+                        placeholder: (chunks) => <code className="bg-muted px-1 py-0.5 rounded text-xs">{chunks}</code>,
+                      })}
                     </li>
-                    <li>连接 Google Calendar 以自动同步您的空闲时间</li>
+                    <li>{t("steps.connectCalendar")}</li>
                   </ol>
                   <div className="pt-2">
                     <Button size="sm" asChild>
                       <a href="https://cal.com/signup" target="_blank" rel="noopener noreferrer">
-                        前往 Cal.com 设置
+                        {t("setupCta")}
                       </a>
                     </Button>
                   </div>
@@ -71,7 +78,7 @@ export function BookingModal({ open, onOpenChange, eventType }: BookingModalProp
                 width="100%"
                 height="100%"
                 frameBorder="0"
-                title="预约服务"
+                title={t("iframeTitle")}
                 allow="camera; microphone; fullscreen; display-capture"
                 className="rounded-lg"
               />

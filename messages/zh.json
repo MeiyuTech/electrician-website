@@ -1,0 +1,130 @@
+{
+  "Metadata": {
+    "title": "橙县电器维修服务 | 空调、冰箱、洗衣机、洗碗机维修",
+    "description": "专业的电器维修服务，服务橙县地区。提供空调、冰箱、洗衣机、洗碗机维修与安装。上门费$50，接受报价后可免除。"
+  },
+  "Header": {
+    "brandName": "橙县电器维修",
+    "tagline": "专业·快速·可靠",
+    "cta": "立即致电"
+  },
+  "Hero": {
+    "title": "专业电器维修服务",
+    "subtitle": "服务橙县地区，提供快速、可靠的电器维修与安装服务",
+    "bullets": ["持证专业技师", "同日服务", "价格透明", "服务保证"],
+    "primaryCta": "上门预约",
+    "secondaryCta": "留言咨询",
+    "imageAlt": "专业技师维修空调"
+  },
+  "Services": {
+    "title": "我们的服务",
+    "subtitle": "提供全方位的电器维修与安装服务",
+    "items": [
+      {
+        "title": "空调维修与安装",
+        "description": "专业的空调维修、安装、保养服务。我们处理各种品牌的中央空调和分体式空调系统。",
+        "features": ["维修与诊断", "安装新系统", "定期保养", "24/7紧急服务"],
+        "featured": true
+      },
+      {
+        "title": "冰箱维修",
+        "description": "快速诊断和修复冰箱问题，包括制冷故障、漏水、噪音等各类问题。",
+        "features": ["制冷系统维修", "温控修复", "密封条更换", "压缩机维修"]
+      },
+      {
+        "title": "洗衣机维修",
+        "description": "修复各种洗衣机问题，包括不排水、不转动、漏水等常见故障。",
+        "features": ["排水系统", "电机维修", "控制面板", "零件更换"]
+      },
+      {
+        "title": "洗碗机安装与维修",
+        "description": "专业的洗碗机安装和维修服务，确保您的洗碗机正常运行。",
+        "features": ["新机安装", "漏水修复", "清洗系统", "电路检查"]
+      }
+    ]
+  },
+  "Pricing": {
+    "title": "透明的价格",
+    "subtitle": "没有隐藏费用，明码标价",
+    "visitFeeTitle": "上门服务费",
+    "visitFeeAmount": "$50",
+    "visitFeePriceLabel": "一次性费用",
+    "visitFeeFeatures": ["专业技师上门诊断", "详细问题评估", "维修方案建议"],
+    "visitFeeCta": "预约诊断",
+    "acceptQuoteTitle": "接受报价",
+    "acceptQuoteAmount": "免费",
+    "acceptQuotePriceLabel": "免除上门费",
+    "acceptQuoteFeatures": ["详细的维修报价", "接受报价后免除上门费", "专业维修服务", "服务保证"],
+    "acceptQuoteCta": "立即预约",
+    "footnote": "* 上门费用于诊断和评估。如果您接受我们的维修报价，上门费将被免除。"
+  },
+  "ServiceArea": {
+    "title": "服务地区",
+    "subtitle": "我们自豪地为橙县及周边地区提供服务",
+    "regionTitle": "橙县 (Orange County)",
+    "regionSubtitle": "覆盖橙县所有城市，包括：",
+    "cities": [
+      "阿纳海姆 (Anaheim)",
+      "尔湾 (Irvine)",
+      "亨廷顿海滩 (Huntington Beach)",
+      "圣安娜 (Santa Ana)",
+      "新港滩 (Newport Beach)",
+      "富勒顿 (Fullerton)",
+      "科斯塔梅萨 (Costa Mesa)",
+      "图斯汀 (Tustin)",
+      "及更多地区..."
+    ],
+    "cta": "不确定您的地区是否在服务范围内？请致电咨询！"
+  },
+  "Contact": {
+    "title": "联系我们",
+    "subtitle": "随时与我们联系，我们将尽快回复",
+    "booking": {
+      "title": "在线预约",
+      "description": "选择您方便的时间，查看实时可用时段",
+      "note": "右侧可直接选择时间并提交预约"
+    },
+    "phone": {
+      "title": "电话",
+      "description": "致电预约服务"
+    },
+    "email": {
+      "title": "邮箱",
+      "description": "发送邮件咨询"
+    },
+    "hours": {
+      "title": "营业时间",
+      "weekday": "周一至周五：8:00 AM - 8:00 PM",
+      "saturday": "周六：9:00 AM - 6:00 PM",
+      "sunday": "周日：10:00 AM - 4:00 PM",
+      "emergency": "提供紧急服务"
+    }
+  },
+  "Footer": {
+    "brandName": "橙县电器维修",
+    "brandDescription": "专业、快速、可靠的电器维修服务，服务橙县及周边地区。",
+    "servicesTitle": "服务项目",
+    "services": ["空调维修与安装", "冰箱维修", "洗衣机维修", "洗碗机安装"],
+    "areasTitle": "服务地区",
+    "areas": ["橙县所有城市", "阿纳海姆", "尔湾", "亨廷顿海滩"],
+    "contactTitle": "联系方式",
+    "phoneLabel": "电话",
+    "emailLabel": "邮箱",
+    "license": "持证经营 · 保险齐全",
+    "copyright": "© 2026 橙县电器维修。保留所有权利。"
+  },
+  "BookingModal": {
+    "title": "预约电器维修服务",
+    "description": "选择您方便的时间，我们将为您提供专业的电器维修服务",
+    "setupPending": "Cal.com 预约系统准备中...",
+    "stepsTitle": "设置步骤：",
+    "steps": {
+      "createAccount": "前往<link>Cal.com</link>注册免费账号",
+      "createEventType": "创建名为<code>{eventType}</code>的活动类型（按需设置时长与类型）",
+      "updateUsername": "在<file>components/booking-modal.tsx</file>中将<placeholder>YOUR_CAL_USERNAME</placeholder>替换为您的用户名",
+      "connectCalendar": "连接 Google Calendar 以自动同步您的空闲时间"
+    },
+    "setupCta": "前往 Cal.com 设置",
+    "iframeTitle": "预约服务"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "Metadata": {
+    "title": "Orange County Appliance Repair | AC, Refrigerator, Washer & Dishwasher Service",
+    "description": "Professional appliance repair in Orange County. AC, refrigerator, washer, and dishwasher repair and installation. $50 service call, waived if you approve the quote."
+  },
+  "Header": {
+    "brandName": "Orange County Appliance Repair",
+    "tagline": "Professional · Fast · Reliable",
+    "cta": "Call Now"
+  },
+  "Hero": {
+    "title": "Professional Appliance Repair Services",
+    "subtitle": "Serving Orange County with fast, reliable appliance repair and installation.",
+    "bullets": ["Licensed technicians", "Same-day service", "Transparent pricing", "Service guarantee"],
+    "primaryCta": "Book an on-site visit",
+    "secondaryCta": "Message for consultation",
+    "imageAlt": "Professional technician repairing an air conditioner"
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive appliance repair and installation services",
+    "items": [
+      {
+        "title": "Air Conditioning Repair & Installation",
+        "description": "Professional AC repair, installation, and maintenance. We handle central and split systems of all brands.",
+        "features": ["Repair & diagnostics", "New system installation", "Routine maintenance", "24/7 emergency service"],
+        "featured": true
+      },
+      {
+        "title": "Refrigerator Repair",
+        "description": "Fast diagnosis and fixes for cooling issues, leaks, noise, and more.",
+        "features": ["Cooling system repair", "Thermostat fixes", "Gasket replacement", "Compressor repair"]
+      },
+      {
+        "title": "Washer Repair",
+        "description": "Fixing common washer problems like draining, spinning, and leaks.",
+        "features": ["Drainage system", "Motor repair", "Control panel", "Parts replacement"]
+      },
+      {
+        "title": "Dishwasher Installation & Repair",
+        "description": "Professional dishwasher installation and repair to keep your unit running right.",
+        "features": ["New unit installation", "Leak repair", "Cleaning system", "Electrical inspection"]
+      }
+    ]
+  },
+  "Pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "No hidden fees, clear pricing",
+    "visitFeeTitle": "Service Call Fee",
+    "visitFeeAmount": "$50",
+    "visitFeePriceLabel": "One-time fee",
+    "visitFeeFeatures": [
+      "On-site diagnosis by a professional technician",
+      "Detailed issue assessment",
+      "Repair plan recommendations"
+    ],
+    "visitFeeCta": "Book a diagnosis",
+    "acceptQuoteTitle": "Approve the Quote",
+    "acceptQuoteAmount": "Free",
+    "acceptQuotePriceLabel": "Service call waived",
+    "acceptQuoteFeatures": [
+      "Detailed repair estimate",
+      "Service call waived after approval",
+      "Professional repair service",
+      "Service guarantee"
+    ],
+    "acceptQuoteCta": "Book now",
+    "footnote": "* The service call fee covers diagnosis and assessment. If you approve our repair quote, the fee is waived."
+  },
+  "ServiceArea": {
+    "title": "Service Area",
+    "subtitle": "Proudly serving Orange County and nearby areas",
+    "regionTitle": "Orange County",
+    "regionSubtitle": "All cities in Orange County, including:",
+    "cities": [
+      "Anaheim",
+      "Irvine",
+      "Huntington Beach",
+      "Santa Ana",
+      "Newport Beach",
+      "Fullerton",
+      "Costa Mesa",
+      "Tustin",
+      "And more..."
+    ],
+    "cta": "Not sure if your area is covered? Call us!"
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "Reach out anytime and we'll respond quickly",
+    "booking": {
+      "title": "Online Booking",
+      "description": "Choose a time that works for you and see real-time availability.",
+      "note": "Select a time on the right and submit your booking."
+    },
+    "phone": {
+      "title": "Phone",
+      "description": "Call to book service"
+    },
+    "email": {
+      "title": "Email",
+      "description": "Send us an inquiry"
+    },
+    "hours": {
+      "title": "Business Hours",
+      "weekday": "Mon–Fri: 8:00 AM - 8:00 PM",
+      "saturday": "Sat: 9:00 AM - 6:00 PM",
+      "sunday": "Sun: 10:00 AM - 4:00 PM",
+      "emergency": "Emergency service available"
+    }
+  },
+  "Footer": {
+    "brandName": "Orange County Appliance Repair",
+    "brandDescription": "Professional, fast, and reliable appliance repair serving Orange County and nearby areas.",
+    "servicesTitle": "Services",
+    "services": ["Air Conditioning Repair", "Refrigerator Repair", "Washer Repair", "Dishwasher Installation"],
+    "areasTitle": "Service Areas",
+    "areas": ["All cities in Orange County", "Anaheim", "Irvine", "Huntington Beach"],
+    "contactTitle": "Contact",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "license": "Licensed & insured",
+    "copyright": "© 2026 Orange County Appliance Repair. All rights reserved."
+  },
+  "BookingModal": {
+    "title": "Book Appliance Repair Service",
+    "description": "Choose a time that works for you and we'll provide professional appliance repair service.",
+    "setupPending": "Cal.com booking is being set up...",
+    "stepsTitle": "Setup steps:",
+    "steps": {
+      "createAccount": "Go to <link>Cal.com</link> to create a free account",
+      "createEventType": "Create an event type named <code>{eventType}</code> (set duration and type as needed)",
+      "updateUsername": "In <file>components/booking-modal.tsx</file>, replace <placeholder>YOUR_CAL_USERNAME</placeholder> with your username",
+      "connectCalendar": "Connect Google Calendar to automatically sync your availability"
+    },
+    "setupCta": "Open Cal.com setup",
+    "iframeTitle": "Book service"
+  }
+}
